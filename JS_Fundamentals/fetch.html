@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+<body>
+    
+    <script>
+
+        //fetch 
+        const url = "https://pokeapi.co/api/v2/pokemon"
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                data.results.forEach(element => console.log(element.name))
+            }).catch(error => console.log(error))
+
+        
+        //async await
+        
+        const getPokemons = async() => {
+            try {
+                const res = await fetch(url)
+                const data = await res.json()
+                //console.log(data.results)
+                let namesArray = []
+                //data.results.forEach(element => namesArray.push(element.name))
+                
+                namesArray = data.results.map(pokemon => pokemon.name)
+                let namesArray2 = data.results.filter(pokemon => pokemon.name != 'bulbasaur')
+                console.log(namesArray)
+                console.log(namesArray2)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        getPokemons()
+
+
+    </script>
+</body>
+</html>

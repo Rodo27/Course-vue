@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+
+        const petMigajon = {
+            name: 'Migajon',
+            age: 1,
+            size: 'Medium',
+            animal: 'Cat',
+            sound(){
+                console.log("Miau Miau")
+            }
+        }
+
+        const namePet =  petMigajon.name
+        console.log(namePet)
+
+        const {name, age, size, animal} = petMigajon
+        console.log(name, age, size, animal)
+
+    </script>
+</body>
+</html>

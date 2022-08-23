@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+
+        const petMigajon = {
+            name: 'Migajon',
+            age: 1,
+            size: 'Medium',
+            animal: 'Cat',
+            sound(){
+                console.log("Miau Miau")
+            }
+        }
+
+        console.log(petMigajon)
+        console.log(petMigajon.name)
+        console.log(petMigajon.age)
+        console.log(petMigajon.size)
+        console.log(petMigajon.animal)
+        petMigajon.sound()
+        petMigajon.sister =  'Anis Estrella'
+        console.log(petMigajon.sister)
+
+        const web = {
+            name: 'bluuweb',
+            links: {
+                link : 'www.bluuwec.cl',
+                facebook: 'bluuweb.fb',
+                youtube: 'bluuweb.yt'
+            }
+        }
+
+        console.log(web.name)
+        console.log(web.links.facebook)
+        console.log(web.links.link)
+        console.log(web.links.youtube)
+
+        console.clear()
+
+        const {youtube,link, facebook} = web.links
+
+        console.log(youtube, link, facebook)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let const</title>
+</head>
+<body>
+    <script>
+        // var - let - const
+
+            var age = 20
+            var age = 25
+
+            console.log(age)
+
+            //using var you can redeclare the variable
+
+            let name = "Aldo Rodrigo"
+            name = "Juan Carlos"
+
+            //using let you cant redeclare the variable but you can assign a new value 
+
+            var age2 =  50
+            
+            if(true){
+                var age2 = 45
+                console.log(age2)
+            }
+
+            console.log(age2)
+
+            //using var the new value is the current value 
+
+            let age3 =  60
+            
+            if(true){
+                let age3 = 75
+                console.log(age3)
+            }
+
+            console.log(age3)
+
+            //using let the value is only valid in the block where this is assign (scope)
+
+
+            const age4 = 40
+
+            if(true){
+                const age4 = 88
+                console.log(age4)   
+            }
+
+            console.log(age4)
+
+            //const is sismilar in scope to let but the value cant be assign again
+
+
+            var numbers = [10, 20, 30]
+            var numbers = [10, 20, 30, 40]
+            console.log(numbers)
+
+
+            let numbers2 = [10, 20, 30]
+            numbers2 = [10, 20, 30, 40]
+            console.log(numbers2)
+
+            const numbers3 = [10, 20, 30]
+            numbers3[3] = 40
+            numbers3.push(50)
+            console.log(numbers3)
+
+            const person = {
+                name : "Rodrigo",
+                age: 25
+            }
+
+            console.log(person)
+
+            person.age = 26
+            console.log(person)
+
+            person.job = "Developer"
+            console.log(person)
+
+
+
+    </script>
+</body>
+</html>
