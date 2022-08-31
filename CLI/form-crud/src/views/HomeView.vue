@@ -3,18 +3,20 @@
     <Inputs :task="task" />
   </form>     
   <hr>
-  <h3>{{tasks}}</h3>
+  <TasksList />
 </template>
 
 <script>
 import Inputs from '../components/Inputs.vue'
+import TasksList from '../components/TasksList.vue'
 import {mapActions, mapState} from 'vuex'
 const shorid = require('shortid')
 
 export default {
   name: 'HomeView',
   components: {
-    Inputs
+    Inputs,
+    TasksList
   },
   data() {
     return {

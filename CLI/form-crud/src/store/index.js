@@ -16,11 +16,17 @@ export default createStore({
   mutations: {
     setTask(state, payload){
       state.tasks.push(payload)
+    },
+    removeTask(state, payload){
+      state.tasks = state.tasks.filter(task => task.id !== payload)
     }
   },
   actions: {
     setTasks({commit}, task){
       commit('setTask', task)
+    },
+    removeTask({commit}, idTask){
+      commit('removeTask', idTask)
     }
   },
   modules: {
