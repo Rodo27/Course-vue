@@ -20,7 +20,7 @@
         <td>{{task.number}}</td>
         <td>
             <button class="btn btn-danger" @click="removeTask(task.id)">Delete</button>
-            <button class="ml-1 btn btn-primary">Edit</button>
+            <router-link class="ml-1 btn btn-primary" :to="{name:'edit', params:{id:task.id}}">Edit</router-link>
         </td>
       </tr>
 
